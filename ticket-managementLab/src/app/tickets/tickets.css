@@ -1,0 +1,131 @@
+/* Page Background */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  margin-top: 40px;
+  padding: 30px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading */
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2c3e50;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Loading & Error Messages */
+div[ng-reflect-ng-if] {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+div:has(> :is(.error)) {
+  color: red;
+}
+
+/* Table Styling */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Table Header */
+.table thead {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+.table thead th {
+  padding: 14px;
+  text-align: center;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+/* Table Body */
+.table tbody td {
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Zebra striping */
+.table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Hover Effect */
+.table tbody tr:hover {
+  background-color: #eef2ff;
+  transform: scale(1.01);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Severity Color Badges */
+td:contains("High") {
+  color: red;
+  font-weight: bold;
+}
+
+td:contains("Medium") {
+  color: orange;
+  font-weight: bold;
+}
+
+td:contains("Low") {
+  color: green;
+  font-weight: bold;
+}
+
+/* Status Styling */
+td:contains("Open") {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+td:contains("Closed") {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .table thead {
+    display: none;
+  }
+
+  .table tbody td {
+    display: block;
+    text-align: right;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  .table tbody td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 12px;
+    font-weight: bold;
+    text-align: left;
+  }
+}

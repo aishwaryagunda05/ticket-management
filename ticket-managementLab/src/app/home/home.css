@@ -1,0 +1,13 @@
+h2 {
+  text-align: center;
+  margin-top: 120px;
+  font-size: 36px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #4f46e5, #9333ea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+
